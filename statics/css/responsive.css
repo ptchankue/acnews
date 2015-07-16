@@ -1,0 +1,328 @@
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.wrap {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+	.menu-wrap{padding:0 !important;}
+	.addbar_leaderborard{width:712px;}
+	#selectnav1{display:none;}
+	#nav-top{display:block;}
+	#nav-bottom{display:block;}
+
+	/* Index page style */
+.mainmenu ul li a {
+  font-size: 12px;
+  padding: 10px;
+}
+.mainmenu {
+  height: 40px;
+}
+.main_content {
+  margin-right: 10px;
+  width: 482px;
+}
+.sidebar {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #999999;
+  padding: 19px;
+  width: 180px;
+}
+.single_content {
+  max-height: 425px;
+  min-height: 425px;
+  width: 233px;
+}
+
+.single_footer {
+  width: 220px;
+}
+
+.footer_area {
+  padding:0;
+}
+.manu_area {
+  margin: 20px 0 0px;
+}
+
+/* single page style */
+
+.related_post_container {
+  margin-left: -10px;
+}
+.single_related_post {
+  margin-left: 10px;
+  width: 136px;
+}
+#googleMap {
+  height: 250px;
+  width: 100%;
+}
+
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	.wrap {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	#selectnav1,#selectnav2{display:block;}
+	#nav-top{display:none;}
+	#nav-bottom{display:none;}
+	
+	/* index page style */
+	
+.logo {
+  float: none;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.logo h1 {
+  margin-top: 0px;
+}
+.manu {
+  float: none;
+  margin-top: 0;
+}
+.menu-wrap {
+  padding: 0 !important;
+  overflow:hidden;
+}
+#selectnav1 {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+#selectnav2{display: block;
+margin: 20px auto 0px;
+width: 200px;}
+.top_add_bar, .bottom_add_bar{display:none;}
+.main_content {
+  float: none;
+  margin-right: 0;
+  width: 252px;
+}
+.single_content_wrapper {
+  margin-left: 0;
+}
+.single_content {
+  float: none;
+  margin-left: 0;
+  max-height: 437px;
+  min-height: 437px;
+  width: 252px;
+}
+.sidebar {
+  float: none;
+  width: 210px;
+  margin: 15px auto 0;
+}
+.footer_top_container {
+  margin-left: 0;
+}
+.single_footer {
+  float: none;
+  margin: 0 auto 15px;
+  width: 250px;
+}
+.manu_area {
+  margin: 20px 0 0px;
+}
+
+.copyright_text {
+  color: #898989;
+  float: none;
+  font-size: 12px;
+  margin-bottom: 10px;
+	padding-left:5px;
+}
+.social_area ul {
+  text-align: center;
+}
+.social_area ul li {
+  display: inline;
+}
+.social_area ul li a {
+  display: inline-block;
+  margin-left: 5px;
+}
+.social_area {
+  float: none;
+}
+
+/* single page style */
+.related_post_container {
+  margin-left: -10px;
+}
+.single_related_post {
+float: none;
+margin-bottom: 10px;
+margin-left: 10px;
+width: 252px;
+}
+.single_page_content h1 {
+  font-size: 20px;
+}
+.single_post_meta p,.single_post_meta p a {
+  color: #c4c4c4;
+  font-size: 6px;
+}
+
+#googleMap {
+  height: 180px;
+  width: 100%;
+}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	.wrap {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+	#selectnav1,#selectnav2{display:block;}
+	#nav-top{display:none;}
+	#nav-bottom{display:none;}
+	
+	/* index page style */
+	
+.logo {
+  float: none;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.logo h1 {
+  margin-top: 0px;
+}
+.manu {
+  float: none;
+  margin-top: 0;
+}
+.menu-wrap {
+  padding: 0 !important;
+  overflow:hidden;
+}
+#selectnav1 {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+#selectnav2{display: block;
+margin: 20px auto 0px;
+width: 200px;}
+.top_add_bar, .bottom_add_bar{display:none;}
+.main_content {
+  float: none;
+  margin-right: 0;
+  width: 436px;
+}
+.single_content_wrapper {
+  margin-left: -15px;
+}
+.single_content {
+  max-height: 430px;
+  min-height: 430px;
+  width: 210px;
+  margin-left:15px;
+  float:left;
+}
+.sidebar {
+float: none;
+margin: 15px auto 0;
+width: 396px;
+}
+.footer_top_container {
+  margin-left: -25px;
+}
+.single_footer {
+  float: none;
+  margin: 0 auto 15px;
+  width: 300px;
+}
+.manu_area {
+  margin: 20px 0 0px;
+}
+
+.copyright_text {
+float: left;
+font-size: 12px;
+margin-bottom: 0;
+padding-left: 0;
+}
+.social_area ul {
+  text-align: center;
+}
+.social_area ul li {
+  display: inline;
+}
+.social_area ul li a {
+  display: inline-block;
+  margin-left: 5px;
+}
+.social_area {
+float: right;
+}
+
+/* single page style */
+.related_post_container {
+  margin-left: -10px;
+}
+.single_related_post {
+  margin-left: 10px;
+  width: 121px;
+  margin-bottom:10px;
+  float: left;
+}
+#googleMap {
+  height: 250px;
+  width: 100%;
+}
+
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}

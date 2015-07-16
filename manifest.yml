@@ -1,0 +1,5 @@
+---
+applications:
+  - name: acnews
+    instances: 1
+    memory: 128M
