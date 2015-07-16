@@ -10,3 +10,6 @@ def test(request):
 def index (request):
 	print 'In index...'
 	return render_to_response('index.html')
+
+def contact(request):
+	return render_to_response('contact.html')

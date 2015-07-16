@@ -14,9 +14,11 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^$', 'news_app.views.index'),
+    url(r'^$', 'news_app.views.index', name = "index"),
 
-    url(r'^test/$', 'news_app.views.test'),
+    url(r'^test/$', 'news_app.views.test', name="test"),
+
+    url(r'^contact/$', 'news_app.views.contact', name="contact"),
 )
 
 if settings.DEBUG:
