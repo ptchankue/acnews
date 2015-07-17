@@ -1,7 +1,10 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 # Create your views here.
+from extractor import Extractor
 
+bot = Extractor()
+bot.parseRadiOkapi()
 
 def test(request):
 	return HttpResponse('This is a test...<img src=/statics/images/social.png></img>')
