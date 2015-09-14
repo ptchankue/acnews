@@ -5,12 +5,12 @@ import urllib2
 class Extractor():
 
 	def __init__(self, **attrs):
-		print 'Constructor...'
+		print 'Extractor Constructor...'
 
 	def parseRadiOkapi(self):
-	    url = "http://www.radiookapi.net/"
-	    page = urllib2.urlopen(url)
-	    soup = BeautifulSoup(page.read())
+	    url 	= "http://www.radiookapi.net/"
+	    page 	= urllib2.urlopen(url)
+	    soup 	= BeautifulSoup(page.read(), convertEntities=BeautifulSoup.HTML_ENTITIES)
 
 	    print  'Parsing http://radiookapi.net'
 

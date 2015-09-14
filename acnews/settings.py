@@ -93,3 +93,5 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 print STATICFILES_DIRS[0]
+
+RFI_BASE_URL = 'http://www.rfi.fr'
