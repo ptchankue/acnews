@@ -22,13 +22,13 @@ sections = soup.findAll('section', {'id':'news'})
 #anchors = [td.find('a') for td in soup.findAll('li', {'data-bo-type':'article'})]
 articles = soup.findAll('li', {'data-bo-type':'article'})
 print 'Number of article:', len(articles)
-for article in articles[:5]:
+for article in articles:
 	if article:
 		a = article.find('a')
 		if a.get('title'):
 			post = Article()
-			print a.get('title').encode('cp850', errors='replace').decode('cp850')
-			post.title =  a.get('title').encode('cp850', errors='replace').decode('cp850')
+			print a.get('title').encode('utf-8')
+			post.title =  a.get('title').encode('utf-8')
 
 			print 'Link:', a['href']
 			post.link = 'http://rfi.fr' + a['href']
@@ -52,5 +52,5 @@ for article in articles[:5]:
 			print '\n\nFrom my database:'
 posts = Article.objects.all()
 for post in posts:
-	print post.link, post.title
+	print post.link.encode('utf-8'), post.title.encode('utf-8')
 print '\n\nArticle #', posts.count()

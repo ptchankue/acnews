@@ -96,9 +96,15 @@
 									<li>
 										{% if article.thumbnail %}
 										<div class="ccr-thumbnail">
-											<img src="{{ article.thumbnail }}" alt="Thumbnail 1">
-											<p><a href="{{ article.link }}">Read More</a></p>
+											<img src="{{ article.thumbnail }}" alt="">
+											<p><a href="{{ article.link }}" target="_blank">Read More</a></p>
 										</div>
+										{% else %}
+										<div class="ccr-thumbnail">
+											<img src="/statics/images/no-image-icon1.jpg" alt="">
+											<p><a href="{{ article.link }}" target="_blank">Read More</a></p>
+										</div>
+
 										{% endif %}
 										<h4>
 											<a href="{{ article.link }}">
