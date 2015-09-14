@@ -11,6 +11,7 @@ class Article(models.Model):
 	snippet		= models.CharField(max_length=100, blank=True, default='')
 	title		= models.CharField(max_length=100)
 	fetched_on  = models.DateTimeField(default=timezone.now())
+	published   = models.BooleanField(default=False)
 
 	def __str__(self):
 		print 'Title:', self.title.encode('utf-8'), '\nLink:', self.link.encode('utf-8')
