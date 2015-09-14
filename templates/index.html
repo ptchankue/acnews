@@ -93,6 +93,7 @@
 							{% endcomment %}
 
 							{% for article in articles %}
+								{% if article.title %}
 									<li>
 										{% if article.thumbnail %}
 										<div class="ccr-thumbnail">
@@ -107,11 +108,12 @@
 
 										{% endif %}
 										<h4>
-											<a href="{{ article.link }}">
+											<a href="{{ article.link }}" target="_blank">
 												{{ article.title }}
 											</a>
 											</h4>
 									</li>
+									{% endif %}
 							{% endfor %}
 
 						</ul> <!-- /.ccr-latest-post -->

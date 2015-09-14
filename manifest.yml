@@ -1,5 +1,5 @@
 ---
 applications:
   - name: acnews
-    instances: 1
-    memory: 128M
+    instances: 2
+    memory: 512M

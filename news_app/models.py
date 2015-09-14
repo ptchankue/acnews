@@ -12,5 +12,10 @@ class Article(models.Model):
 	title		= models.CharField(max_length=100)
 	fetched_on  = models.DateTimeField(default=timezone.now())
 
-	def __str__():
-		print 'Title:', title, '\nLink:', link
+	def __str__(self):
+		print 'Title:', self.title.encode('utf-8'), '\nLink:', self.link.encode('utf-8')
+
+class Visitor(models.Model):
+	ip			= models.CharField(max_length=100)
+	nb_visit	= models.IntegerField(default=0)
+	last_visit  = models.DateTimeField(default=timezone.now())
