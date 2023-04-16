@@ -10,8 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -25,7 +25,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -53,7 +52,6 @@ ROOT_URLCONF = 'acnews.urls'
 
 WSGI_APPLICATION = 'acnews.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
@@ -77,21 +75,21 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 
-print 'BASE_DIR=', BASE_DIR
+print('BASE_DIR=', BASE_DIR)
 
 STATIC_URL = '/statics/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "statics"),
-    #'/var/www/static/',
+    # '/var/www/static/',
 )
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
-print STATICFILES_DIRS[0]
+
+print(STATICFILES_DIRS[0])
 
 RFI_BASE_URL = 'http://www.rfi.fr'

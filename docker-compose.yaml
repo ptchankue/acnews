@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    restart: always
+    build: .
+    command: python manage.py runserver
+    ports:
+      - "8003:8000"
+    volumes:
+      - .:/ac_news
