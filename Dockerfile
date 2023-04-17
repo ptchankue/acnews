@@ -1,11 +1,12 @@
 # set the base image
-FROM python:3.9
+FROM python:3.11
 # File Author / Maintainer
 MAINTAINER Patrick Tchankue
 
 RUN apt-get update && apt-get install -y build-essential
 
 ENV APP_HOME /ac_news
+
 RUN mkdir $APP_HOME
 
 WORKDIR $APP_HOME
