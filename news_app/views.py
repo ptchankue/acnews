@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 # from django.contrib.gis.geoip import GeoIP
 
 # Create your views here.
-from extractor import Extractor
+# from extractor import Extractor
 from news_app.models import Article, Visitor
 
 
