@@ -1,5 +1,5 @@
 Django==4.2.11
 djangorestframework==3.14.0
-gunicorn==20.1.0
+gunicorn==22.0.0
 beautifulsoup4
 python-dotenv==1.0.0
