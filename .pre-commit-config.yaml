@@ -1,0 +1,39 @@
+exclude: |
+    (?x)(
+        ^docs/|
+        ^.*/migrations/.*\.py|
+        ^.vscode/
+    )
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+
+-   repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+    -   id: black
+
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+    -   id: isort
+        args: ["--profile", "black", "--filter-files"]
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.2.0
+    hooks:
+    - id: mypy
+
+-   repo: https://github.com/PyCQA/flake8
+    rev: 5.0.4
+    hooks:
+    -   id: flake8
+
+#-   repo: https://github.com/pycqa/pydocstyle
+#    rev: 6.1.1
+#    hooks:
+#    -   id: pydocstyle
