@@ -1,4 +1,5 @@
-<!doctype html>
+{% load static %}
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -28,17 +29,16 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-
-
 <header id="ccr-header">
 	<section id="ccr-nav-top" class="fullwidth">
 		<div class="">
 			<div class="container">
 				<nav class="top-menu">
 					<ul class="left-top-menu">
-						<li><a href="/">Home</a></li>
-						<li><a href="/contact/">Contact</a></li>
-					</ul><!-- /.left-top-menu -->
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					</ul>
+					<!-- /.left-top-menu -->
 
 					<ul class="right-top-menu pull-right">
 						<li><a href="#">Login</a></li>
@@ -61,8 +61,8 @@
 	<section id="ccr-site-title">
 		<div class="container">
 			<div class="site-logo">
-				<a href="index.html" class="navbar-brand">
-					<img src="/statics/img/logo.png" alt="Side Logo" />
+				<a href="{% url 'index' %}" class="navbar-brand">
+					<img src="{% static 'img/logo.png' %}" alt="Side Logo" />
 						<h1>AC <span>News</span></h1>
 						<h3>News de l'Afrique Centrale</h3>
 				</a>
@@ -89,9 +89,9 @@
 
 				<div class="collapse navbar-collapse ccr-nav-main">
 					<ul class="nav navbar-nav">
-						<li><a class="active" href="/">Accueil</a></li>
+						<li><a class="active" href="{% url 'index' %}">Accueil</a></li>
 
-						<li><a href="/contact/">Contact</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
 					</ul> <!-- /  .nav -->
 				</div><!-- /  .collapse .navbar-collapse  -->
 
