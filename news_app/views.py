@@ -47,4 +47,4 @@ class ContactView(TemplateView):
 
 
 class CategoryView(TemplateView):
-    template_name = "contact.html"
+    template_name = "category-1.html"
