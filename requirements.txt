@@ -6,3 +6,4 @@ requests
 python-dotenv==1.0.0
 django-pytest
 google-auth
+cloudinary==1.44.1
