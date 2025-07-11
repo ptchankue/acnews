@@ -13,7 +13,7 @@ class SimpleTest(TestCase):
         """
         Tests that 1 + 1 always equals 2.
         """
-        self.failUnlessEqual(1 + 1, 2)
+        assert 1 + 1 ==  2
 
 
 __test__ = {
@@ -31,6 +31,7 @@ class BlogTest(TestCase):
         pass
 
     def test_Get_blog(self):
-        resp = self.client.get("/ blog")
+        resp = self.client.get("/blog")
 
+        print(resp.status_code)
         assert resp.status_code == 200
