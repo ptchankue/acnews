@@ -24,3 +24,13 @@ Another way to test that 1 + 1 is equal to 2.
 True
 """
 }
+
+class BlogTest(TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_Get_blog(self):
+        resp = self.client.get("/ blog")
+
+        assert resp.status_code == 200
