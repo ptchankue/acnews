@@ -1,7 +1,6 @@
 # set the base image
 FROM python:3.12
-# File Author / Maintainer
-MAINTAINER Patrick Tchankue
+
 
 RUN apt-get update && apt-get install -y build-essential
 
