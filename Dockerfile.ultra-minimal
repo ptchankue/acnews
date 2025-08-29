@@ -1,0 +1,82 @@
+# Stage 1: Builder stage for dependencies
+FROM python:3.11-slim-bookworm AS builder
+
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_NO_INTERACTION=1
+
+# Install build dependencies and clean up in same layer
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/cache/apt/*
+
+WORKDIR /ac_news
+
+# Install poetry
+RUN pip install --no-cache-dir poetry==1.8.2
+
+# Copy only dependency files first for better caching
+COPY pyproject.toml poetry.lock* ./
+
+# Install dependencies without dev packages
+RUN poetry install --only main --no-root
+
+# Stage 2: Final image
+FROM python:3.11-slim-bookworm
+
+LABEL author="Tangent Solutions" \
+      description="Ultra-minimal Django application" \
+      version="1.0"
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/opt/app \
+    DEBIAN_FRONTEND=noninteractive
+
+# Install only the absolute minimum runtime packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq5 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/cache/apt/* \
+    && rm -rf /tmp/* \
+    && rm -rf /var/tmp/*
+
+# Create non-root user
+RUN groupadd -r app && useradd -r -g app app
+
+# Set working directory
+WORKDIR /opt/app
+
+# Copy Python packages from builder stage
+COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
+
+# Copy ONLY the essential Python code (exclude all large files)
+COPY webapp/config/ webapp/config/
+COPY webapp/accounts/ webapp/accounts/
+COPY webapp/integration/ webapp/integration/
+COPY webapp/system/ webapp/system/
+COPY webapp/templates/ webapp/templates/
+COPY webapp/__init__.py webapp/__init__.py
+COPY webapp/manage.py webapp/manage.py
+COPY pyproject.toml .
+
+# Create minimal necessary directories
+RUN mkdir -p /tmp/dramatiq-prometheus && \
+    chmod 777 /tmp/dramatiq-prometheus
+
+# Change ownership to app user
+RUN chown -R app:app /opt/app
+
+# Switch to app user
+USER app
+
+# Expose port
+EXPOSE 8000
+
+# Default command
+CMD ["python", "webapp/manage.py", "runserver", "0.0.0.0:8000"]
