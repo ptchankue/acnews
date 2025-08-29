@@ -1,8 +1,18 @@
-# set the base image
-FROM python:3.12
+# Stage 1: Builder stage for dependencies
+FROM python:3.11-slim-bookworm AS builder
 
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_NO_INTERACTION=1
 
-RUN apt-get update && apt-get install -y build-essential
+# Install build dependencies and clean up in same layer
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/cache/apt/*
 
 ENV APP_HOME /ac_news
 
