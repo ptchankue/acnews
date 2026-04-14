@@ -1,16 +1,20 @@
 {% load static %}
 
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="" >
+	<meta name="description" content="AC News — actualités et informations sur l'Afrique centrale.">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bienvenue sur Afrique centrale News </title>
+	<title>Bienvenue sur Afrique centrale News</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap-theme.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/acnews-modern.css' %}">
 	<!--[if lt IE 9]>
 		<script src="{% static '/js/html5shiv.js' %}"></script>
 	<![endif]-->
@@ -31,7 +35,7 @@
 
 <header id="ccr-header">
 	<section id="ccr-nav-top" class="fullwidth">
-		<div class="">
+		<div class="ccr-nav-top-inner">
 			<div class="container">
 				<nav class="top-menu">
 					<ul class="left-top-menu">
@@ -62,14 +66,14 @@
 		<div class="container">
 			<div class="site-logo">
 				<a href="{% url 'index' %}" class="navbar-brand">
-					<img src="{% static 'img/logo.png' %}" alt="Side Logo" />
+					<img src="{% static 'img/logo.png' %}" alt="AC News" />
 						<h1>AC <span>News</span></h1>
 						<h3>News de l'Afrique Centrale</h3>
 				</a>
 			</div> <!-- / .navbar-header -->
 
-			<div class="add-space">
-				728 x 90 px Banner
+			<div class="add-space" role="img" aria-label="Espace publicitaire">
+				Espace pub · 728 × 90
 			</div> <!-- / .adspace -->
 
 		</div>	<!-- /.container -->
@@ -131,7 +135,7 @@
 <footer id="ccr-footer">
 	<div class="container">
 	 	<div class="copyright">
-	 		&copy; 2014, Copyrights <a href="http://codexcoder.com">CodexCoder</a> Theme. All Rights Reserved
+	 		&copy; 2026 AC News — News de l'Afrique centrale. Tous droits réservés.
 	 	</div> <!-- /.copyright -->
 
 	 	<div class="footer-social-icons">
