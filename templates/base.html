@@ -1,0 +1,168 @@
+{% load static %}
+
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="AC News — actualités et informations sur l'Afrique centrale.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bienvenue sur Afrique centrale News</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap-theme.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/acnews-modern.css' %}">
+	<!--[if lt IE 9]>
+		<script src="{% static '/js/html5shiv.js' %}"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header id="ccr-header">
+	<section id="ccr-nav-top" class="fullwidth">
+		<div class="ccr-nav-top-inner">
+			<div class="container">
+				<nav class="top-menu">
+					<ul class="left-top-menu">
+						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					</ul>
+					<!-- /.left-top-menu -->
+
+					<ul class="right-top-menu pull-right">
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Register</a></li>
+						<li><a href="#">Subscribe</a></li>
+						<li>
+							<form class="form-inline" role="form" action="#">
+								<input type="search" placeholder="Search here..." required>
+								  <button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</li>
+					</ul> <!--  /.right-top-menu -->
+				</nav> <!-- /.top-menu -->
+			</div>
+		</div>
+	</section> <!--  /#ccr-nav-top  -->
+
+
+
+	<section id="ccr-site-title">
+		<div class="container">
+			<div class="site-logo">
+				<a href="{% url 'index' %}" class="navbar-brand">
+					<img src="{% static 'img/logo.png' %}" alt="AC News" />
+						<h1>AC <span>News</span></h1>
+						<h3>News de l'Afrique Centrale</h3>
+				</a>
+			</div> <!-- / .navbar-header -->
+
+			<div class="add-space" role="img" aria-label="Espace publicitaire">
+				Espace pub · 728 × 90
+			</div> <!-- / .adspace -->
+
+		</div>	<!-- /.container -->
+	</section> <!-- / #ccr-site-title -->
+
+
+
+	<section id="ccr-nav-main">
+		<nav class="main-menu">
+			<div class="container">
+
+				<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-main">
+				            <i class="fa fa-bars"></i>
+			          	</button> <!-- /.navbar-toggle -->
+				</div> <!-- / .navbar-header -->
+
+				<div class="collapse navbar-collapse ccr-nav-main">
+					<ul class="nav navbar-nav">
+						<li><a class="active" href="{% url 'index' %}">Accueil</a></li>
+
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					</ul> <!-- /  .nav -->
+				</div><!-- /  .collapse .navbar-collapse  -->
+
+				<div id="currentTime" class="pull-right current-time">
+					<i class="fa fa-clock-o"></i>  {% now "F jS o" %}
+
+
+				</div><!-- / #currentTime -->
+
+			</div>	<!-- /.container -->
+		</nav> <!-- /.main-menu -->
+	</section> <!-- / #ccr-nav-main -->
+
+
+
+	<section id="ccr-nav-below-main">
+		<nav class="second-menu">
+			<div class="container">
+
+				<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+				            <i class="fa fa-bars"></i>
+			          	</button> <!-- /.navbar-toggle -->
+				</div> <!-- / .navbar-header -->
+
+			</div><!-- /.container -->
+		</nav><!-- /.second-menu -->
+	</section><!-- / #ccr-nav-below-main -->
+
+</header> <!-- /#ccr-header -->
+
+
+{% block content %}
+
+{% endblock %}
+
+<footer id="ccr-footer">
+	<div class="container">
+	 	<div class="copyright">
+	 		&copy; 2026 AC News — News de l'Afrique centrale. Tous droits réservés.
+	 	</div> <!-- /.copyright -->
+
+	 	<div class="footer-social-icons">
+	 		<ul>
+	 			<li>
+	 				<a href="#"  class="google-plus"><i class="fa fa-google-plus"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+	 			</li>
+	 			<li >
+	 				<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	 			</li>
+	 		</ul>
+
+	 	</div><!--  /.cocial-icons -->
+
+	</div> <!-- /.container -->
+</footer>  <!-- /#ccr-footer -->
+
+
+	<script src="{% static '/js/jquery-1.9.1.min.js' %}"></script>
+	<script src="{% static '/js/bootstrap.min.js' %}"></script>
+	<script src="{% static '/js/custom.js' %}"></script>
+
+</body>
+</html>
