@@ -73,7 +73,7 @@ Tags:
 @font-face
 {
 font-family: Tahoma;
-src: url(../fonts/tahoma.ttf);
+src: url(../font/tahoma.ttf);
 }
 body, h1, h2, h3, h4, h5, h6, a, p, div, article,
 aside, details, figcaption, figure, footer,

@@ -1,3 +1,6 @@
 *.pyc
 .env
 acnews.db
+.venv
+scripts
+.idea

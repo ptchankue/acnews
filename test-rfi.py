@@ -17,7 +17,7 @@ def parse(article: Any) -> None:
     print(article.find("a", {"class": "modal"}))
 
 
-url = "http://rfi.fr/afrique"
+url = "https://rfi.fr/afrique"
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 
