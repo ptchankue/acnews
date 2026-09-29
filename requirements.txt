@@ -1,9 +1,9 @@
-Django==5.2.13
-djangorestframework==3.17.1
+Django==5.2.15
+djangorestframework==3.17.2
 gunicorn==23.0.0
 beautifulsoup4
 requests>=2.33.1
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 django-pytest
 google-auth
 cloudinary==1.44.1
